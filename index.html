@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Python Technical Guide</title>
+</head>
+<body>
+    <main id="main-doc">
+      <div>
+        <nav id="navbar" class="navbar">
+          <header>Contents</header>
+          <div class="navmenu">
+            <a class="nav-link" href="#Introduction">Introduction</a>
+            <a class="nav-link" href="#Your_First_Code">Your First Code</a>
+            <a class="nav-link" href="#Strings_and_Booleans">Strings and Booleans</a>
+            <a class="nav-link" href="#Integers_and_Floats">Integers and Floats</a>
+            <a class="nav-link" href="#Variables">Variables</a>
+          </div>
+        </nav>
+      </div>
+      <div class="mainsection">
+          <h1>A Technical Guide to Python Language</h1>
+        <section class="main-section" id="Introduction">
+          <header>Introduction</header>
+          <p>
+            Python is a high-level, interpreted programming language created by Guido van Rossum in 1991, 
+            designed to emphasize code readability and simplicity. Its clear and straightforward syntax, 
+            which resembles plain English, makes it an excellent choice for beginners while remaining powerful 
+            and flexible for experienced developers. Python supports multiple programming paradigms, 
+            including procedural, object-oriented, and functional programming, allowing developers 
+            to approach problems in various ways. Its strong emphasis on readability and minimalistic 
+            design helps reduce the complexity of code, making it easier to write and maintain.
+          </p>
+          <p>
+            One of Python’s greatest strengths is its extensive standard library, which includes 
+            pre-built modules for a wide range of tasks, from file handling and regular expressions 
+            to networking and data manipulation. On top of that, Python has a vast ecosystem of 
+            third-party libraries and frameworks, such as NumPy and Pandas for data analysis, TensorFlow 
+            and PyTorch for machine learning, Django and Flask for web development, and many others. 
+            This makes Python extremely versatile, allowing it to be used in diverse fields, including 
+            web development, scientific computing, artificial intelligence, automation, and game development. 
+            Python's cross-platform nature ensures that code runs on different operating systems like Windows, 
+            macOS, and Linux without requiring major changes. Its active and supportive community, along 
+            with a wealth of resources, has contributed to its status as one of the most popular programming 
+            languages in the world, favored by both beginners and seasoned professionals.
+          </p>
+          <p>
+            In this page, you will find a technical guide to the Python language to help you get started with it.
+          </p>
+          <ol> What you will be needing to get started with Python:
+            <li>A laptop or desktop</li>
+            <li>Python interpreter (Download it from <a href="https://www.python.org/downloads/" target="_blank">Python)</a></li>
+            <li>Code editor or IDE (e.g., VSCode, PyCharm) (You will get VS Code from <a href="https://code.visualstudio.com/download" target="_blank">VS Code)</a></li>
+            <li>A notetaking app or notebook</li>
+          </ol>
+        </section>
+
+        <section class="main-section" id="Your_First_Code">
+          <header>Your First Code</header>
+          <p>
+            In Python (or in any other programming language), everyone starts by writing a simple "Hello, World!" program. This program outputs the text "Hello, World!" 
+            to the screen and serves as a basic introduction to the syntax and structure of the language.
+          </p>
+          <p>
+            To do this, first you need to open the VS Code (or any other Code editor that you're using) and open a new file. Name it something like: "code.py". Make sure to have the .py extension at the end. 
+            Start writing the below code in the editor:
+          </p>
+          <code>
+            print("Hello World!")
+          </code>
+          <p>
+            Now you should run the code by the play button at the top right corner in VS Code and a terminal should pop up
+            where the text "Hello World!" is shown. And Booyaah, you have written your very first line of code.
+          </p>
+          <p>
+            Now lets get to the explanation part. What happened here? So we use the <span class="bold">print</span> statement in Python for printing something in the terminal.
+            And pretty much after every command, we need to include a <span class="bold">parenthesis ()</span> to mention the parameters of what is given to the command. When you 
+            wrote "Hello World!" within the parenthesis, the program knew that it had to print the text "Hello World". Now you might ask what were the 
+            quotation marks for. Good question, these are related to <span class="bold">String</span>. More about that later on! So that's for the introduction code. See you more on the next one.
+          </p>
+          <ul> Key takeaways from here:
+            <li>Print() is a command to write something in the terminal</li>
+            <li>We use () after every command and push the parameter of the command into the parenthesis</li>
+          </ul>
+        </section>
+
+        <section class="main-section" id="Strings_and_Booleans">
+          <header>Strings and Booleans</header>
+          <h2>Strings</h2>
+            <p>
+              A string in Python is a data type used to represent a sequence of characters, whether those characters are letters, 
+              digits, punctuation, or spaces. Strings are one of the most fundamental and widely used 
+              types in Python, forming the backbone of most text-related tasks in programming. A string 
+              is enclosed by either single quotes (' ') or double quotes (" "), which makes it easy 
+              to create and manipulate text in your code. This flexibility allows strings to represent 
+              a wide range of data, such as names, messages, sentences, or even entire paragraphs. 
+              Despite the fact that strings appear to be just simple sequences of text, 
+              they have many layers of complexity that allow them to be extremely powerful in Python. 
+              The key feature of strings is that they are immutable, meaning once a string is created, 
+              its value cannot be changed directly. However, you can create new strings based on the 
+              original string by applying various transformations. Strings are widely used in almost every 
+              aspect of programming, from reading and writing files, displaying user messages, and even 
+              building dynamic web pages with HTML or interacting with databases where text is crucial.
+            </p>
+            <p>
+              The manipulation of strings in Python is facilitated by a wide range of operations and built-in methods that allow you to modify, search, and format text easily. For instance, strings can be concatenated, meaning that you can combine multiple strings into one. This is particularly useful when dynamically constructing messages or working with multiple pieces of text. Python also provides string slicing, which allows you to extract specific parts of a string by indicating a start and end position. You can search for substrings within a string to check if certain words or patterns exist, and you can even replace parts of a string with new text. Python strings also support various formatting operations, such as converting all characters to uppercase or lowercase, trimming extra spaces, or removing unwanted characters from the beginning or end of the string. Furthermore, strings can be split into smaller segments based on a delimiter, such as spaces or commas, and these segments can be further processed as needed. These powerful string operations make it easier to work with textual data, whether you're building a user interface, processing data from an external file, or communicating with an external system. Strings are essential not just for outputting messages, but for tasks like data cleaning, web scraping, and manipulating data in formats like JSON, CSV, or XML. Overall, Python's string handling capabilities provide a highly flexible and dynamic way to work with text in almost any programming scenario.
+            </p>
+          <h2>Booleans</h2>
+            <p>
+              A boolean in Python is a data type that can only hold one of two values: True or False. These values are fundamental to logic and decision-making in programming, as they help control the flow of the program. Booleans are often used in conditional statements, where the program needs to evaluate whether a condition is true or false in order to determine what actions to take next. For example, a boolean expression might check if a user is logged in, if a number is greater than another, or if a certain condition is met. These conditions are evaluated using comparison operators such as == (equal to), != (not equal to), < (less than), or > (greater than), which return a boolean value of either True or False. Booleans play a crucial role in controlling the logic of a program, enabling programmers to make decisions and create more dynamic behaviors based on real-time data or user input.
+            </p>
+            <p>
+              The power of booleans lies in their ability to simplify complex logical operations. In Python, booleans can be combined using logical operators like and, or, and not to create more intricate conditions. The and operator returns True only if both conditions it is comparing are True, while the or operator returns True if at least one condition is True. The not operator inverts the boolean value, so it turns True into False and vice versa. These logical operations are incredibly useful when dealing with multiple conditions, such as checking if a user has the correct permissions, determining whether an input is valid, or controlling a program's flow based on multiple factors. In addition to their role in decision-making, booleans also serve as the foundation for more advanced concepts like boolean algebra, logical circuits, and even data structures like binary trees or search algorithms.
+            </p>
+            <p>You can write the following code:</p>
+              <code>print("True")</code>
+              <code>print(True)</code>
+            <p class="output">In both cases, the output will be true, but one is boolean, and one is string</p>
+          <ul> Key takeaways from here:
+            <li>Strings are sequences of characters enclosed in quotes</li>
+            <li>Booleans represent True or False values</li>
+          </ul>
+        </section>
+
+        <section class="main-section" id="Integers_and_Floats">
+          <header>Integers and Floats</header>
+          <h2>Integers</h2>
+          <p>
+            An integer in Python is a data type used to represent whole numbers, both positive and negative, without any decimal or fractional part. Examples of integers include -10, 0, and 42. Integers are one of the most commonly used data types in programming because they allow you to work with discrete values, such as counts, indices, and measurements that don’t require precision beyond whole numbers. In Python, integers are not limited by the size of the memory allocated for them, meaning they can grow to be as large as your system's memory allows. This is a feature that makes Python different from many other programming languages, which impose strict limits on the size of integers. Integers are often used in mathematical calculations, loops, and decision-making structures where whole number operations are necessary. Whether you’re tracking the number of items in a list, managing iterations in a loop, or performing arithmetic, integers provide the backbone for numerical operations in programming
+          </p>
+          <p>
+            Python provides a wide range of operations and methods for working with integers. Arithmetic operations like addition, subtraction, multiplication, and division can be performed directly on integers. Other operators, such as modulo (%), are useful for finding the remainder of a division, while floor division (//) ensures the result of division is an integer, discarding any remainder. Integers are also used in more advanced operations, like exponentiation or working with mathematical functions provided by Python's built-in math module. Integers can interact with other data types, such as strings and floats, through typecasting or mathematical operations. For example, an integer can be converted to a string for display purposes or combined with a float in calculations, with the result automatically becoming a float. Python’s integers are flexible and highly efficient for working with data that requires precise, whole-number calculations, making them essential for almost every programming scenario, from simple calculations to complex algorithms. Their simplicity and versatility ensure that they remain one of the most fundamental and frequently used data types in Python programming.
+          </p>
+          <h2>Floats</h2>
+          <p>
+            A float in Python is a data type used to represent numbers that contain a decimal point or are expressed in scientific notation. Floats are essential when working with measurements, percentages, or any calculations requiring precision beyond whole numbers. Examples of floats include 3.14, -0.5, or 1.2e3 (which represents 
+                1200). Unlike integers, floats can represent fractional values, making them crucial for real-world computations like calculating currency, performing physics simulations, or working with percentages. However, floats are stored as approximations in memory due to how computers handle decimal numbers, meaning their precision is not infinite. While this is usually sufficient for most tasks, it can lead to minor inaccuracies in certain calculations. Floats are versatile and automatically result from operations that involve decimals, such as division of two integers or mathematical functions involving fractions.
+          </p>
+          <p>
+            Python provides a wide range of mathematical operations and functions for working with floats. You can perform basic arithmetic like addition, subtraction, multiplication, and division, as well as more advanced operations using modules like math or numpy. Floats can be rounded to a specific number of decimal places using the round() function, making them more manageable in scenarios where precision is essential, such as displaying monetary values. Python also allows you to seamlessly convert between floats and other data types, such as integers or strings, using typecasting. This flexibility makes floats easy to integrate into complex calculations or workflows involving mixed data types. Additionally, floats support scientific notation for working with very large or very small numbers, which is particularly useful in scientific and engineering applications. Despite their potential limitations in precision, floats are indispensable for handling continuous data, modeling real-world phenomena, and performing calculations that require more detail than integers can provide. Their ability to handle a broad range of numerical scenarios makes them a key data type in Python programming.
+          </p>
+          <ul> Key takeaways from here:
+            <li>Integers are whole numbers without decimals</li>
+            <li>Floats are numbers with decimals</li>
+          </ul>
+        </section>
+
+        <section class="main-section" id="Variables">
+          <header>Variables</header>
+          <p>
+            A variable in Python is a symbolic name that is used to reference a value stored in memory. Variables are 
+            essential for storing data that can be used and manipulated throughout a program. When you create a variable, 
+            you essentially create a container that holds a value, which can be of any data type, such as an integer, float, 
+            string, or boolean. To assign a value to a variable in Python, you simply use the assignment operator (=). 
+            For example, to create a variable called `age` and assign it the value 25, you would write `age = 25`.
+          </p>
+          <p>
+            A variable in Python is a symbolic name that acts as a container for storing data. It allows programmers to assign values to a name, making it easier to reference and manipulate that data later in the program. Variables play a central role in programming, as they provide a way to work with data dynamically. When creating a variable, Python does not require you to explicitly declare its type, thanks to its dynamic typing feature. This means you can assign a value (e.g., a number, a string, or a list) to a variable, and Python automatically determines its type. For example, you can assign x = 10 to store an integer and later change it to x = "Hello" to store a string. Variables make your code readable and maintainable, as you can reuse them instead of repeatedly writing the same value. They are essential for performing calculations, storing user input, and managing the flow of data throughout a program.
+          </p>
+          <p>
+            In Python, variables are easy to use and follow a few simple rules. A variable name must start with a letter or an underscore (_), and it can only contain alphanumeric characters and underscores (e.g., my_variable or _data). Python is case-sensitive, so Variable and variable are treated as different identifiers. Variables can store different types of data, including integers, floats, strings, booleans, lists, dictionaries, and more, making them versatile for a wide range of tasks. Additionally, variables can point to the result of an operation, allowing for dynamic updates and efficient computation. Python provides the ability to assign multiple variables at once (e.g., x, y, z = 1, 2, 3) or reassign them to new values as needed. Variables are fundamental to building efficient and flexible programs, as they allow you to store, retrieve, and manipulate data throughout the code. By using descriptive variable names, programmers can make their code clearer and easier to understand, promoting better collaboration and long-term maintainability.
+          </p>
+          <p>You can write the following code:</p>
+          <code>x = 10</code>
+          <code>print(x)</code>
+          <p>The Output will be "10"</p>
+          <code>x = 10</code>
+          <code>y = 20</code>
+          <code>print(x+y)</code>
+          <p>The output will be "30"</p>
+          <ul> Key takeaways from here:
+            <li>Variables store data that can be used throughout a program</li>
+            <li>Python is dynamically typed, so you don’t need to specify the type of data</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+</body>
+</html>
